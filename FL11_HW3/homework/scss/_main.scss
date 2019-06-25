@@ -1,0 +1,343 @@
+
+$footer_description: (
+  color_to:#cdcddd,
+  color_my:#c21616
+);
+
+@mixin sec_tit {
+  font-size: 42px;
+  color: $sectionTextColor;
+  z-index: 200;
+  font-weight: 500;
+  display: table;
+  margin: 0 auto;
+  padding: 35px 0;
+  width: auto;
+  height: auto;
+  position: relative;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: $mainBackground;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.landing-logo {
+  display: flex;
+  align-items: center;
+
+  p {
+    line-height: 22px;
+    font-size: 24px;
+    padding-left: 18px;
+    margin: 0;
+    padding-top: 12px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: $font2;
+    font-weight: 700;
+    color: $logoColor;
+    
+
+    span {
+      font-size: 12px;
+      letter-spacing: -1px;
+      text-align: center;
+      font-weight: 100;
+      
+    }
+  }
+}
+
+.header {
+  position: relative;
+  background-image: $bgImgHeader;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 0 420px 0;
+  z-index: 900;
+
+  .header-wrap {
+    height: auto;
+    display: block;
+    padding-bottom: 220px;
+    padding-top: 22px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &_heading {
+    color: $headerText;
+    font-size: 72px;
+    font-family: $font1;
+    font-weight: 900;
+    width: 100%;
+    max-width: 620px;
+    
+
+    &:after {
+      min-height: 20px;
+      position: relative;
+      left: 0;
+      z-index: -1;
+      top: -33px;
+      display: block;
+      background-color: $AfterColor;
+      content: '';
+      width: 295px;
+      height: auto;
+    }
+  }
+
+  &_text {
+    font-family: $font2;
+    color: $headerText;
+    width: 100%;
+    max-width: 510px;
+    margin-bottom: 70px;
+    
+  }
+
+  &_button {
+    font-family: $font1;
+    color: #ffffff;
+    background-color: $btnColor;
+    width: 140px;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:hover {
+      background-color: $hoverBtn;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  &_text {
+    @include sec_tit;
+
+    &::after {
+      content: '';
+      background-color: $welcomeAfterColor;
+      width: 178px;
+      height: auto;
+      min-height: 11px;
+      position: absolute;
+      right: 3%;
+      z-index: -1;
+      bottom: 35%;
+    }
+  }
+
+  &_card_wrap {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    margin-bottom: 150px;
+  }
+
+  &_card {
+    display: flex;
+    justify-content: flex-start;
+    background-color: $Itembg;
+    margin: 0 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    max-width: 33.3%;
+    width: 100%;
+
+    &_img {
+      width: 100%;
+      height: 235px;
+      border-radius: 5px;
+    }
+
+    &_heading {
+      margin-top: 10px;
+      font-size: 24px;
+      text-align: center;
+      color: #ffffff;
+      font-family: $font1;
+      font-weight: 700;
+      position: relative;
+      z-index: 100;
+      flex-direction: column;
+      margin: 0 auto;
+      display: table;
+      width: auto;
+      
+    }
+
+    &_underline {
+      top: -13px;
+      width: 100%;
+      background-color: $UnderlineColor;
+      height: auto;
+      min-height: 15px;
+      position: relative;
+      display: table;
+      z-index: -2;
+
+    }
+
+    &_text {
+      color: #cdcddd;
+      font-family: $font2;
+      text-align: center;
+    }
+  }
+
+  &_banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -80px;
+    z-index: 100;
+    
+
+    &_text_wrap {
+      background: $readyBackgroundColor;
+      max-width: 990px;
+      position: relative;
+      z-index: 100;
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      
+
+    }
+
+    &_button {
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: "Source Sans Pro", sans-serif;
+      color: #ffffff;
+      z-index: 400;
+      display: block;
+      position: relative;
+      right: 16%;
+      background-color: $btnColor;
+      width: 140px;
+      height: 50px;
+
+      &:hover {
+        @extend .header_button:hover;
+      }
+    }
+
+    &_heading {
+      color: $sectionBannerTitleColor;
+      font-family: $font1;
+      max-width: 600px;
+      z-index: 200;
+      margin: 35px 0 10px 100px;
+      font-weight: 700;
+      font-size: 34px;
+      width: 100%;
+
+      &:after {
+        content: '';
+        background-color: $sectionBannerAdterColor;
+        width: 75px;
+        height: auto;
+        min-height: 15px;
+        position: relative;
+        left: 22.5%;
+        z-index: -1;
+        top: -21px;
+        display: block;
+      }
+    }
+
+    &_text {
+      width: 100%;
+      max-width: 600px;
+      color: #cdcddd;
+      font-size: 22px;
+      font-family: $font2;
+      margin: 0 0 40px 100px;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: $footerColor;
+  padding: 150px 0 50px 0;
+
+  .footer-wrap {
+    width: 85%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-cr {
+      color: #cdcddd;
+      font-family: $font2;
+      font-size: 18px;
+    }
+  }
+
+  &_logo {
+    display: flex;
+    flex-direction: row;
+    img {
+      padding-right: 15px;
+    }
+    p {
+      color: #cdcddd;
+      font-size: 30px;
+      margin: 0;
+      padding: 10px 0 0 0;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+  &_text {
+    width: 100%;
+    max-width: 350px;
+    color: map-get($footer_description,color_to);
+    font-family: $font2;
+    margin: 0;
+    font-size: 16px;
+  }
+}
